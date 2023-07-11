@@ -1,0 +1,444 @@
+body{
+    background-image: repeating-linear-gradient(45deg, hsla(64,83%,54%,0.05)
+     0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px,
+      hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(64,83%,54%,0.05)
+       0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05)
+        12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05)
+         1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),
+         repeating-linear-gradient(135deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05)
+          11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(41, 27, 158),rgb(249, 77, 212));
+    min-height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+}
+
+
+
+.item{
+    position: absolute;
+    width: 300px;
+    height: 455px;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(42%);
+    align-items: center;
+    top: 0;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item img{
+        border-radius: 10px;
+        width: 100%;
+        box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.VoirPlus:hover{
+    transform: scale(1.07);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: black;
+    background: #fff;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    font-size: x-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 50px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+
+}
+
+#next{
+    left: unset;
+    right: 5%;
+}
+
+#prev{
+    left: 5%;
+    right: unset;
+}
+
+button:hover{
+    transform: scale(1.13);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.VoirPlus{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    display: block;
+    color: black;
+    background-color: rgb(250, 244, 244);
+    padding: 1px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+*{
+    text-decoration: none;
+    
+}
+
+.menu{
+    background-color: #2d323d;;
+    color: white;
+    
+    padding: 20px 20px 40px 20px;
+    margin-bottom: 150px;
+}
+
+.Femmes{
+    margin: 50px;
+    text-align: center;
+    opacity: 0.6;
+    mix-blend-mode:lighten;
+    color: white;
+
+}
+
+
+.menu li {
+    float: left;
+    width: 200px;
+    list-style: none;
+    transition: all 0.5s ease;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+}
+
+
+
+
+
+
+.menu li a:link, .menu li a:visited {
+    display: block;
+    color: #FFF;
+    background: #293245;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    
+}
+
+.menu li a:hover {background:linear-gradient(
+    to top right, #8b5cf6, #ec4899
+);;transition: all 0.5s ease;border-radius: 20px;}
+.menu li a:active {background-color: #293245;transition: all 0.5s ease;}
+
+.menu .sousmenu {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.menu .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.menu .sousmenu li a:link, .menu li a:visited {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    background: #293245;
+    transition: all 0.5s ease;
+}
+
+.menu .sousmenu li a:hover {
+    background:linear-gradient(
+        to top right, #8b5cf6, #ec4899
+    );;
+    transition: all 0.5s ease;
+}
+
+.menu li:hover .sousmenu {
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.home{
+    margin: 520px 0 0 0;
+    background-color: #293245;
+    padding: 20px 20px 100px 20px;
+    color: #fff;
+
+}
+
+.homeFemmes{
+    margin: 630px 0 0 0;
+    background-color: #293245;
+    padding: 20px 20px 100px 20px;
+    color: #fff;
+
+}
+
+.catchphrase{
+    margin: 150px 0 0 100px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.jordan{
+    display: block;
+  margin-left: auto;
+
+  width: 45%;
+  transition: all 2s ease;
+}
+
+.tn{
+    display: block;
+  margin-left: auto;
+
+  width: 45%;
+  transition: all 2s ease;
+}
+
+.rsx{
+    display: block;
+  margin-left: auto;
+
+  width: 45%;
+  transition: all 2s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#multicouche {
+    position: relative; /*l'élément est positionné mais il se place tout seul*/
+  }
+  
+  #multicouche img {
+    position: absolute;
+    top: unset;
+    left: 500px;
+  }
+
+  
+    
+
+        
+  
+   
+  #couche1 {
+    z-index: 1;
+    margin-left: -200px;
+    
+  }
+
+  #couche2 {
+    z-index: 2;
+    margin-left: 100px;
+
+
+  }
+
+  #couche3 {
+    z-index: 3;
+    margin-left: 400px;
+
+
+  }
+
+  .jordan:hover{
+    transform: translate(-50px);
+    transition: all 0.5s ease;
+  }
+
+  .tn:hover{
+    transform: translate(-50px);
+    transition: all 0.5s ease;
+  }
+
+  .rsx:hover{
+    transform: translate(-50px);
+    transition: all 0.5s ease;
+  }
+
+  #mc1{
+    animation-name: GoUpAtBeginning1;
+    animation-duration: 3s;
+    position: relative;
+    animation-fill-mode: forwards;
+    z-index: 3;
+}
+
+#mc2{
+    animation-name: GoUpAtBeginning3;
+    animation-duration: 3s;
+    position: relative;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+#mc3{
+    animation-name: GoUpAtBeginning2;
+    animation-duration: 3s;
+    position: relative;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+
+.VoirLesProduits{
+    float: left;
+    width: 200px;
+    list-style: none;
+    transition: all 0.5s ease;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 70px 00px 0 0;
+    background-color: #2d323d;;
+    color: white;
+    border: none;
+    padding: 10px 5px 10px 5px ;
+    font-family: 'Poppins', sans-serif;
+    animation-iteration-count: infinite;
+    font-size: 20px;
+    text-align: center;
+}
+
+.VoirLesProduits:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+.AnimButton{
+    animation-name: GoUpAtBeginningButton;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+    @keyframes GoUpAtBeginning2{
+        0%{
+            opacity: 0%;
+        }
+        10%{transform: translateY(0px);
+            
+            
+        }
+        30%{opacity: 0%;}
+        100%{
+            transform: translateY(-300px);
+            opacity: 100%;}
+        }
+
+        @keyframes GoUpAtBeginning3{
+            0%{
+                opacity: 0%;
+            }
+            
+            20%{transform: translateY(0px);
+            }
+            30%{opacity: 0%;}
+            100%{
+                transform: translateY(-300px);
+                opacity: 100%;}
+            }
+    
+            @keyframes GoUpAtBeginning1{
+                0%{
+                    opacity: 0%;
+                }
+                
+                30%{opacity: 0%;}
+                100%{
+                    transform: translateY(-300px);
+                    opacity: 100%;}
+                }
+
+                @keyframes GoUpAtBeginningButton{
+                    0%{
+                        opacity: 0%;
+                    }
+                    
+                    30%{opacity: 0%;}
+                    100%{
+                        transform: translateY(-50px);
+                        opacity: 100%;}
+                    }
+        
+
+                .rsx:,:not(:hover){
+                    
+                    transition: all 3s ease;
+                  }
+
+                  .tn:,:not(:hover){
+                    
+                    transition: all 3s ease;
+                  }
+
+                  .jordan:,:not(:hover){
+                    
+                    transition: all 3s ease;
+                  }
+                  
+#Slogan{
+    animation-name: slogan;
+    animation-duration: 2s;
+}
+
+#Slogan2{
+    animation-name: slogan2;
+    animation-duration: 4s;
+}
+
+@keyframes slogan{
+    0%{opacity: 0%;}
+    20%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+@keyframes slogan2{
+    0%{opacity: 0%;}
+    50%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+#missing{
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
