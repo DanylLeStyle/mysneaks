@@ -443,3 +443,87 @@ button:hover{
     color: white;
     font-size: 100px;
 }
+
+.pmissing{
+    text-align: center;
+    width: 400px;
+    margin-left: 38%;
+}
+
+#buttonhome{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    background-color: #293245;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 47%;
+}
+
+/* */
+
+.categorie{
+    position: relative;
+    width: 300px;
+    height: 455px;
+    
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(31%);
+    align-items: center;
+    top: 0;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    display: inline-block;
+    margin-left: 30px;
+    text-align: center;
+    
+}
+
+.categorie img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease;
+}
+
+.categorie:hover{
+    transform: scale(1.03);
+}
+
+.animcategorie{
+    animation-name: animproduits;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animproduits{
+    0%{opacity: 0%;transform: translateY(200px);}
+    100%{/*on va pas se mytho ca sert a rien de remplir ici*/}
+}
+
+.categorie a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    display: block;
+    color: black;
+    background-color: rgb(250, 244, 244);
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease;
+}
+
+.categorie a:hover{
+    transform: scale(1.03);
+}
+
+.categorie img:hover{
+    transform: scale(1.03);
+}
