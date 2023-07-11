@@ -12,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: monospace;
+    background-attachment: fixed;
 }
 
 .slider{
