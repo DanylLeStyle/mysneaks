@@ -123,7 +123,7 @@ button:hover{
     color: white;
     
     padding: 20px 40px 40px 40px;
-    margin-bottom: 150px;
+    margin-bottom: 0px;
     width: auto;
     
 }
@@ -288,14 +288,14 @@ button:hover{
 
   #couche2 {
     z-index: 2;
-    margin-left: 40px;
+    margin-left: 30px;
 
 
   }
 
   #couche3 {
     z-index: 3;
-    margin-left: 150px;
+    margin-left: 130px;
 
 
   }
@@ -381,7 +381,7 @@ button:hover{
         }
         30%{opacity: 0%;}
         100%{
-            transform: translateY(-300px);
+            transform: translateY(-420px);
             opacity: 100%;}
         }
 
@@ -394,7 +394,7 @@ button:hover{
             }
             30%{opacity: 0%;}
             100%{
-                transform: translateY(-300px);
+                transform: translateY(-420px);
                 opacity: 100%;}
             }
     
@@ -405,7 +405,7 @@ button:hover{
                 
                 30%{opacity: 0%;}
                 100%{
-                    transform: translateY(-300px);
+                    transform: translateY(-420px);
                     opacity: 100%;}
                 }
 
@@ -421,17 +421,17 @@ button:hover{
                     }
         
 
-                .rsx:,:not(:hover){
+                .rsx:not(:hover){
                     
                     transition: all 3s ease;
                   }
 
-                  .tn:,:not(:hover){
+                  .tn:not(:hover){
                     
                     transition: all 3s ease;
                   }
 
-                  .jordan:,:not(:hover){
+                  .jordan:not(:hover){
                     
                     transition: all 3s ease;
                   }
@@ -439,6 +439,7 @@ button:hover{
 #Slogan{
     animation-name: slogan;
     animation-duration: 2s;
+    margin-top: 60px;
 }
 
 #Slogan2{
@@ -543,3 +544,32 @@ button:hover{
 .categorie img:hover{
     transform: scale(1.03);
 }
+
+
+/* */
+
+.blob{
+    overflow: hidden;
+    border-bottom-right-radius: 400px;
+   animation-name: animblob;
+   animation-duration: 2s;
+   inline-size: 400px;
+   height: 400px;
+   
+   width: 400px;
+   animation-fill-mode: forwards;
+   scale: 80%;
+   
+   margin-left: 0%;
+   margin-top: 150px;
+   text-align: left;
+}
+
+@keyframes animblob{
+    0%{transform: translateY(300px);opacity: 0%;
+    }
+    20%{transform: translateY(300px);opacity: 0%;
+    }
+    100%{transform: translateY(-100px);}
+}
+
