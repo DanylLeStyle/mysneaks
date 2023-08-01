@@ -380,9 +380,24 @@ html.is-animating .transition-fade {
     .container {
         position: relative;
         width: calc(100% - 20px);}   
+      .content p {
+         display: none;
+      }
+    .content {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
 }
 
-@media (max-width: 992px){
+@media (max-width:410px){
+    header{
+        padding: 20px 0px;
+        position: relative;
+        left: 0;
+        top: -10vh;}
+    }
+
+@media (max-width: 768px){
     section{
         padding: 50px 10px 10px;
     }
@@ -394,9 +409,9 @@ html.is-animating .transition-fade {
     }
     header{
         padding: 20px 0px;
-        position: relative;
-        left: 0;
-        top: -10vh;
+        
+        justify-content: center;
+        
     }
     .container {
         flex-direction: unset;
