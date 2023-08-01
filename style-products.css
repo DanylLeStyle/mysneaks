@@ -60,8 +60,8 @@ section{
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 50px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -95,7 +95,6 @@ header{
     height: 380px;
     margin: 10px;
     display:flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.05);
@@ -109,7 +108,7 @@ header{
 .container .card:hover{
     background-color: rgba(255, 255, 255, 0.5);
 
-    /* jsp pk mais faut pas enlever */
+    /* jsp pk mas faut pas enlever */
 }
 
 
@@ -371,4 +370,70 @@ header ul li a.active
 
 html.is-animating .transition-fade {
     opacity: 0%;
+}
+
+
+/* MEDIA QUERIES ( REACTIVE ) */
+
+@media (max-width: 1200px)
+ {
+    .container {
+        position: relative;
+        width: calc(100% - 20px);}   
+}
+
+@media (max-width: 992px){
+    section{
+        padding: 50px 10px 10px;
+    }
+    .cursor-dot{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    header{
+        padding: 20px 0px;
+        position: relative;
+        left: 0;
+        top: -10vh;
+    }
+    .container {
+        flex-direction: unset;
+    }
+    .sci{
+        display: none;
+    }
+    .copyrighttext{
+        font-size: x-small;
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        text-align: center;
+    }
+
+    .content {
+        padding-left: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+        .content h2 {
+            font-size: 2em;
+        }
+        .content p {
+            display: none;
+        }
+        .container .card {
+            position: relative;
+            width: 50vh;
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;}
+
+    .boutonachat{
+        margin-top: 70px;
+    }
+            
 }

@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor:none;
+    cursor: none;
 
 }
 
@@ -25,20 +25,6 @@ body{
     
 }
 
-#custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5); /* Couleur semi-transparente (blanc dans cet exemple) */
-    mix-blend-mode: difference; /* Mode de fusion de différence */
-    pointer-events: none; /* Le curseur personnalisé ne doit pas être cliquable */
-    z-index: 9999; /* Assurez-vous que le curseur est au-dessus de tous les autres éléments */
-  }
-
-  
 /*Curseur*/
 .cursor-dot
 {
@@ -315,4 +301,55 @@ header ul li a.active
 
 html.is-animating .transition-fade {
     opacity: 0%;
+}
+/* MEDIA QUERIES ( REACTIVE ) */
+
+@media (max-width: 1200px)
+ {
+    .container {
+        position: relative;
+        width: calc(100% - 20px);}   
+}
+
+@media (max-width: 992px){
+    section{
+        padding: 50px 10px 10px;
+    }
+    .cursor-dot{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    header{
+        padding: 20px 0px;
+        position: relative;
+        left: 0;
+        top: -10vh;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .sci{
+        display: none;
+    }
+    .copyrighttext{
+        font-size: x-small;
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        text-align: center;
+    }
+
+    .content {
+        padding-left: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+        .content h2 {
+            font-size: 2em;
+        }
+        .content p {
+            display: none;
+        }
 }
