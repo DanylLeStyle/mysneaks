@@ -303,8 +303,7 @@ html.is-animating .transition-fade {
 
 /* MEDIA QUERIES ( REACTIVE ) */
 
-@media (max-width: 1200px)
- {
+@media (max-width: 1200px){
     .container {
         position: relative;
         width: calc(100% - 20px);}   
@@ -312,17 +311,20 @@ html.is-animating .transition-fade {
          display: none;
       }
     .content {
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+            margin-top: unset;
+            margin-bottom: 10px;
+    }
+    .content h2 {
+        font-size: 2.5em;
     }
 }
 
 @media (max-width:410px){
     header{
         padding: 20px 0px;
-        position: relative;
-        left: 0;
-        top: -10vh;}
+        position: absolute;
+        
+        }
     }
 
 @media (max-width: 768px){
@@ -343,6 +345,7 @@ html.is-animating .transition-fade {
     }
     .container {
         flex-direction: column;
+        height: 85vh;
     }
     .sci{
         display: none;
@@ -357,7 +360,7 @@ html.is-animating .transition-fade {
 
     .content {
         padding-left: 0px;
-        padding: 40px;
+        padding: 20px 50px 100px 50px;
         text-align: center;
         width: 30vh;
         justify-content: left;
@@ -369,5 +372,8 @@ html.is-animating .transition-fade {
             display:none;
         }
 
+        .cursor-dot{
+            display: none;
+        }
         
 }

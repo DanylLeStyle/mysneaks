@@ -375,8 +375,7 @@ html.is-animating .transition-fade {
 
 /* MEDIA QUERIES ( REACTIVE ) */
 
-@media (max-width: 1200px)
- {
+@media (max-width: 1200px){
     .container {
         position: relative;
         width: calc(100% - 20px);}   
@@ -384,8 +383,11 @@ html.is-animating .transition-fade {
          display: none;
       }
     .content {
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+            margin-top: unset;
+            margin-bottom: 10px;
+    }
+    .content h2 {
+        font-size: 2.5em;
     }
 }
 
@@ -415,6 +417,10 @@ html.is-animating .transition-fade {
     }
     .container {
         flex-direction: unset;
+    }
+    .container .card{
+        padding: 40px;
+        margin: 0;
     }
     .sci{
         display: none;
@@ -448,7 +454,10 @@ html.is-animating .transition-fade {
             align-items: center;}
 
     .boutonachat{
-        margin-top: 70px;
+        margin-top: 50px;
+    }
+    .cursor-dot{
+        display: none;
     }
             
 }
