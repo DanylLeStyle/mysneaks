@@ -364,6 +364,7 @@ html.is-animating .transition-fade {
         text-align: center;
         width: 30vh;
         justify-content: left;
+        animation: none;
     }
         .content h2 {
             font-size: 2em;
