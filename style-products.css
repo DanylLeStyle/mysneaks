@@ -421,10 +421,12 @@ html.is-animating .transition-fade {
     }
     .container {
         flex-direction: unset;
+        padding: 50px 20px 50px 20px;
     }
     .container .card{
-        padding: 40px;
-        margin: 0;
+        padding: 0px;
+        margin: 0 0 30px 0;
+        width: 100vh;
     }
     .sci{
         display: none;
@@ -458,10 +460,21 @@ html.is-animating .transition-fade {
             align-items: center;}
 
     .boutonachat{
-        margin-top: 50px;
+        margin-top: 10px;
+        padding: 25px 80px;
+        font-size: 2em;
+    }
+    .h2titre{
+        margin-top: 40px;
     }
     .cursor-dot{
         display: none;
+    }
+    .card .imgBx2:hover img{
+        transform: translateY(-30px);
+    }
+    .card .imgBx2:hover h2{
+        transform: translateY(-45px);
     }
             
 }
