@@ -113,11 +113,28 @@ header{
     /* jsp pk mas faut pas enlever */
 }
 
+.card .imgBx2 .img2{
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.5);
+    transform: translateY(-60px);
+}
 
+.card .imgBx2:hover .img1{
+    opacity: 0;
+}
 
 .card .imgBx2:hover img{
-    transform: translateY(-50px);
+transform: translateY(-50px);
 }
+
+.card .imgBx2:hover .img2{
+    transform: translateY(-100px) scale(0.7);
+    
+    opacity: 1;
+}
+
+
 
 .card .imgBx2:hover h2{
     transform: translateY(-50px);
@@ -276,6 +293,7 @@ header ul li a.active
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
 
 .sci li{
@@ -393,6 +411,9 @@ html.is-animating .transition-fade {
     .content h2 {
         font-size: 2.5em;
     }
+    .cursor-dot{
+        display: none;
+    }
 }
 
 @media (max-width:410px){
@@ -427,6 +448,7 @@ html.is-animating .transition-fade {
         padding: 0px;
         margin: 0 0 30px 0;
         width: 100vh;
+        height: unset;
     }
     .sci{
         display: none;
@@ -461,8 +483,8 @@ html.is-animating .transition-fade {
 
     .boutonachat{
         margin-top: 10px;
-        padding: 25px 80px;
-        font-size: 2em;
+        padding: 15px 50px;
+        font-size: 1.1em;
     }
     .h2titre{
         margin-top: 40px;
@@ -471,10 +493,12 @@ html.is-animating .transition-fade {
         display: none;
     }
     .card .imgBx2:hover img{
-        transform: translateY(-30px);
+        transform: translateY(-15px);
     }
     .card .imgBx2:hover h2{
-        transform: translateY(-45px);
+        transform: translateY(-55px);
     }
             
-}
+    .card .imgBx2:hover .desc {
+        transform: translateY(60px);}
+}  
