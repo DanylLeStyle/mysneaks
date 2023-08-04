@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MySneaks 🔥 | Products </title>
-    <script defer ="app.js"></script>
+    <script  rel="app.js"></script>
     <link rel="stylesheet" href="style-products.css">
     
 </head>
@@ -172,6 +172,13 @@ glare: true,
                 pos.style.setProperty('--y', e.clientY +"px");
             })
         </script>
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+  var mysneakshead = document.querySelector("header");
+  mysneakshead.classList.toggle("sticky", window.scrollY > 0);
+  })
+</script>
 
 
 

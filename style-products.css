@@ -14,6 +14,7 @@ body{
 }
 
 
+
 .cursor-dot{
     width: 20px;
     height: 20px;
@@ -328,6 +329,16 @@ header ul li a.active
 .mysneakshead{
     animation: loading1 3s ;
     animation-fill-mode: forwards;
+    z-index: 100000000;
+}
+
+.mysneakshead.sticky{
+    position: fixed;
+    top: -2px;
+    z-index: 100000000;
+    left: 0;
+    right: 0;
+    border-radius: 0;
 }
 
 .content{
@@ -483,7 +494,8 @@ html.is-animating .transition-fade {
 
     .boutonachat{
         margin-top: 10px;
-        padding: 15px 50px;
+        min-width: 30vh;
+        text-align: center;
         font-size: 1.1em;
     }
     .h2titre{
