@@ -31,7 +31,7 @@ body{
     left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 100000000000000;
     pointer-events: none;
     transform: translateX(calc(var(--x)/1)) translateY(calc(var(--y)/1));
 }
@@ -72,6 +72,7 @@ section{
 
 header{
     position: absolute;
+    
     top: -40px;
     right: 20px;
     left: 20px;
@@ -88,6 +89,7 @@ header{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     transform: translateX(calc(var(--x)/200)) translateY(calc(var(--y)/200));
+    transition: right 0.5s, left 0.5s, border-radius 1s;
     
 }
 
@@ -327,9 +329,10 @@ header ul li a.active
 }
 
 .mysneakshead{
-    animation: loading1 3s ;
-    animation-fill-mode: forwards;
+    /*animation: loading1 3s ;
+    animation-fill-mode: forwards; -----Afin d'éviter bug visuel avec sticky navbar------ */
     z-index: 100000000;
+    
 }
 
 .mysneakshead.sticky{
@@ -339,7 +342,10 @@ header ul li a.active
     left: 0;
     right: 0;
     border-radius: 0;
+    
 }
+
+
 
 .content{
     animation: loading2 5.5s ;
@@ -430,9 +436,8 @@ html.is-animating .transition-fade {
 @media (max-width:410px){
     header{
         padding: 20px 0px;
-        position: relative;
-        left: 0;
-        top: -10vh;}
+        position: absolute;
+       }
     }
 
 @media (max-width: 768px){

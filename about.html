@@ -65,7 +65,12 @@
             })
         </script>
 
-
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+  var mysneakshead = document.querySelector("header");
+  mysneakshead.classList.toggle("sticky", window.scrollY > 15);
+  })
+</script>
 
 </body>
 </html>
