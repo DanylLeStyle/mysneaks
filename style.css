@@ -9,7 +9,22 @@
 
 }
 
+.animatedFire img{
+    width: 50px;
+    margin-left: 10px;
+    justify-content: left;
+    display: block;
+    
+    
+}
 
+
+
+.logoContent{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 body{
     width: 100%;
@@ -22,7 +37,7 @@ body{
     height: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     transition: transform 0.1s ease; /* Ajouter une transition pour un agrandissement en douceur */
-    
+    z-index: 999999999999999999999999999999999999999;
 }
 
 /*Curseur*/
@@ -88,7 +103,7 @@ header{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     transform: translateX(calc(var(--x)/200)) translateY(calc(var(--y)/200));  /* mouvement top bar */
-    
+    transition: right 1.5s ease, left 1.5s ease, border-radius 0.5s ease-in-out;
 }
 
 
@@ -97,6 +112,7 @@ header .logo{
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
+    display: flex;
 }
 
 
@@ -239,8 +255,20 @@ header ul li a.active
 }
 
 .mysneakshead{
-    animation: loading1 3s ;
-    animation-fill-mode: forwards;
+    /*animation: loading1 3s ;
+    animation-fill-mode: forwards; -----Afin d'éviter bug visuel avec sticky navbar------ */
+   
+    
+}
+
+.mysneakshead.sticky{
+    position: fixed;
+    top: -2px;
+    z-index: 100000000;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    
 }
 
 .content{
@@ -354,9 +382,10 @@ html.is-animating .transition-fade {
     .cursor-dot{
         display: none;
     }
-    .logo{
+    .logoContent{
         display: none;
     }
+    
     header{
         padding: 20px 0px;
         
@@ -399,5 +428,6 @@ html.is-animating .transition-fade {
         animation-name:loading1;
         animation-duration: 2s;
     }
+    
 }
 
