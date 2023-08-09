@@ -36,6 +36,23 @@ body{
     transform: translateX(calc(var(--x)/1)) translateY(calc(var(--y)/1));
 }
 
+.animatedFire img{
+    width: 50px;
+    margin-left: 10px;
+    justify-content: left;
+    display: block;
+    
+    
+}
+
+
+
+.logoContent{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 
 section{
     display: flex;
