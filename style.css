@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    cursor: auto;
 
 }
 
@@ -18,7 +18,102 @@
     
 }
 
+.popup{
+    position: absolute;
+    z-index: 1;
+    background-color: #e9d3eccb;
+    width: 80%;
+    height: 88%;
+    padding: 30px 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 
+.popup button{
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.popup h1{
+    text-align: center;
+    font-size: 150px;
+    position: absolute;
+    color: black;
+    
+}
+
+.popup h3{
+    color: #0000008c;
+    position:relative;
+}
+
+.popup h1 span{
+    letter-spacing:0px;
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    top: -20px;
+    left: 40px;
+    display: inline-block;
+    animation: bounce 0.8s ease infinite alternate;
+    font-size: 150px;
+    color: #000000;
+    text-shadow:
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0, .4);
+  }
+  
+  h1 span:nth-child(2) { animation-delay: .1s; }
+  h1 span:nth-child(3) { animation-delay: .2s; }
+  h1 span:nth-child(4) { animation-delay: .3s; }
+  h1 span:nth-child(5) { animation-delay: .4s; }
+  h1 span:nth-child(6) { animation-delay: .5s; }
+  h1 span:nth-child(7) { animation-delay: .6s; }
+  h1 span:nth-child(8) { animation-delay: .7s; }
+  h1 span:nth-child(9) { animation-delay: .8s; }
+  h1 span:nth-child(10) { animation-delay: .9s; }
+  h1 span:nth-child(11) { animation-delay: 1s; }
+  h1 span:nth-child(12) { animation-delay: 1.1s; }
+  h1 span:nth-child(13) { animation-delay: 1.2s; }
+  h1 span:nth-child(14) { animation-delay: 1.3s; }
+  
+  @keyframes bounce {
+    100% {
+      top: -50px;
+      color: #50152b;
+      rotate: 5deg;
+      text-shadow:
+                   0 50px 25px rgba(0, 0, 0, .2);
+    }
+    
+}
+
+.popup img{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-20%);
+    height: auto;
+    width: 55%;
+    z-index: -1;
+}
 
 .logoContent{
     align-items: center;
@@ -32,26 +127,22 @@ body{
     cursor:none;
 }
 
-.cursor-dot{
+.cursor-dot {
     width: 20px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     transition: transform 0.1s ease; /* Ajouter une transition pour un agrandissement en douceur */
-    z-index: 999999999999999999999999999999999999999;
-}
-
-/*Curseur*/
-.cursor-dot
-{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 9999999999999999999999999999999999999999;
     pointer-events: none;
     transform: translateX(calc(var(--x)/1)) translateY(calc(var(--y)/1));
+    
 }
+
 
 
 
@@ -428,6 +519,50 @@ html.is-animating .transition-fade {
         animation-name:loading1;
         animation-duration: 2s;
     }
+
+    .popup{
+        top: 50%;
+        height: 800px;
+    }
     
+    .popup h1{
+        font-size: 50px;
+        margin-left: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .popup h3{
+        text-align: center;
+        margin-left: 0;
+        padding: 0;
+        position: relative;
+        top: -100px;
+    }
+
+    .popup img{
+        position: relative;
+        width: 250px;
+        top: 190px;
+    }
+
+    .popup h1 span{
+        font-size: 30px;
+        margin-left: 0;
+        padding: 0;
+        position: relative;
+        left: 0;
+        top: 40px;
+    }
+
+    @keyframes bounce {
+        100% {
+          top: 0px;
+          color: #50152b;
+          rotate: 5deg;
+          text-shadow:
+                       0 50px 25px rgba(0, 0, 0, .2);
+        }
 }
 
+}

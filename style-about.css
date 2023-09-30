@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    cursor: auto;
 }
 
 body{
@@ -30,25 +30,20 @@ body{
     display: flex;
 }
 
-.cursor-dot{
+.cursor-dot {
     width: 20px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     transition: transform 0.1s ease; /* Ajouter une transition pour un agrandissement en douceur */
-    
-}
-
-/*Curseur*/
-.cursor-dot
-{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 100000000000000;
+    z-index: 9999999999999999999999999999999999999999;
     pointer-events: none;
     transform: translateX(calc(var(--x)/1)) translateY(calc(var(--y)/1));
+    
 }
 
 
