@@ -456,6 +456,47 @@ html.is-animating .transition-fade {
     *{
         cursor:de;
     }
+    .popup{
+        position: fixed;
+    }
+    .popup h1{
+        font-size: 50px;
+        text-align: center;
+        left: 50%;
+    top: 50%;
+    transform: translate(-50%,-150%);
+    
+    width: 80%;
+    }
+    .popup h1 span{
+        font-size: 70px;
+        text-align: center;
+        top: 0px;
+        left: 0;
+    }
+    .popup h3{
+        color: #00000021;
+        top: -60px;
+    }
+
+    @keyframes bounce {
+        100% {
+          top: -20px;
+          color: #50152b;
+          rotate: 5deg;
+          text-shadow:
+                       0 50px 25px rgba(0, 0, 0, .2);
+        }
+}
+
+    .popup button{
+        width: 50px;
+        background-color: #00000049;
+        border-radius: 20px;
+        color: white;
+        position: relative;
+        margin-right: -10px;
+    }
 }
 
 @media (max-width:410px){
@@ -519,17 +560,28 @@ html.is-animating .transition-fade {
         animation-name:loading1;
         animation-duration: 2s;
     }
-
+    .popup button{
+        margin-right: -30px;
+        margin-top: -20px;
+        width: 40px;
+    }
     .popup{
-        top: 50%;
-        height: 800px;
+       
+        left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    position: fixed;
     }
     
     .popup h1{
-        font-size: 50px;
+        font-size: 30px;
         margin-left: 0;
         padding: 0;
         position: relative;
+        left: 50%;
+    top: 50%;
+    transform: translate(-50%,-140%);
     }
 
     .popup h3{
@@ -537,13 +589,14 @@ html.is-animating .transition-fade {
         margin-left: 0;
         padding: 0;
         position: relative;
-        top: -100px;
+        top: -7%;
+        font-size: 10px
     }
 
     .popup img{
         position: relative;
-        width: 250px;
-        top: 190px;
+        width: 200px;
+        top:-20%
     }
 
     .popup h1 span{
@@ -552,7 +605,7 @@ html.is-animating .transition-fade {
         padding: 0;
         position: relative;
         left: 0;
-        top: 40px;
+        top: 20px;
     }
 
     @keyframes bounce {
